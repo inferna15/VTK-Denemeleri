@@ -1,0 +1,5 @@
+INFO: Bu bir INFO mesajýdýr (genel bilgi).
+WARNING: Bu bir WARNING mesajýdýr (uyarý).
+ERROR: Bu bir ERROR mesajýdýr (hata).
+CRITICAL: Bu bir CRITICAL mesajýdýr (kritik hata).
+INFO: Küp oluþturma süresi: 0.0090 saniye
