@@ -35,10 +35,23 @@ for i in range(num_points):
 table.SetNumberOfRows(num_points)
 
 # Grafiğe bir veri serisi ekle
+"""
 line = chart.AddPlot(vtk.vtkChart.LINE)
 line.SetInputData(table, 0, 1)  # X = 0. sütun, Y = 1. sütun
 line.SetColor(0, 255, 0, 255)  # Yeşil renk
 line.SetWidth(2.0)
+"""
+
+bar = chart.AddPlot(vtk.vtkChart.BAR)
+bar.SetInputData(table, 0, 1)
+bar.SetColor(255, 0, 0, 255)  # Kırmızı
+
+"""
+points = chart.AddPlot(vtk.vtkChart.POINTS)
+points.SetInputData(table, 0, 1)
+points.SetColor(0, 0, 255, 255)  # Mavi
+points.SetMarkerStyle(vtk.vtkPlotPoints.CIRCLE)  # Daire işaretleyici
+"""
 
 # Render penceresi ve etkileşim
 context_view.GetRenderWindow().SetSize(800, 600)
